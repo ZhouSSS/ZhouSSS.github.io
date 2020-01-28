@@ -3,6 +3,85 @@
   
     
     <entry>
+      <title><![CDATA[时间轴]]></title>
+      <url>/2020/01/28/%E6%97%B6%E9%97%B4%E8%BD%B4/</url>
+      <content type="html"><![CDATA[<p>@timeline{</p>
+<h5 id="1996"><a href="#1996" class="headerlink" title="1996"></a>1996</h5><p>@item{</p>
+<h6 id="6月8日"><a href="#6月8日" class="headerlink" title="6月8日"></a>6月8日</h6><p>2014 </p>
+<p>}</p>
+<p>@item{</p>
+<h6 id="7月7日"><a href="#7月7日" class="headerlink" title="7月7日"></a>7月7日</h6><p>2018</p>
+<p>}</p>
+<p>}</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[三栏样式]]></title>
+      <url>/2020/01/28/%E4%B8%89%E6%A0%8F%E6%A0%B7%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<p>@column-3{</p>
+<p>@card{</p>
+<p>左</p>
+<p>}</p>
+<p>@card{</p>
+<p>@center{</p>
+<p>中</p>
+<p>}</p>
+<p>}</p>
+<p>@card{</p>
+<p>@right{</p>
+<p>右</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[双栏样式]]></title>
+      <url>/2020/01/28/%E5%88%86%E6%A0%8F%E6%A0%B7%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<p>@column-2{</p>
+<p>@card{</p>
+<h1 id="左"><a href="#左" class="headerlink" title="左"></a>左</h1><p>}</p>
+<p>@card{</p>
+<h1 id="右"><a href="#右" class="headerlink" title="右"></a>右</h1><p>}</p>
+<p>}</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Markdown语法]]></title>
+      <url>/2020/01/28/Markdown%E8%AF%AD%E6%B3%95/</url>
+      <content type="html"><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><ul>
+<li>表格1</li>
+<li>表格2</li>
+<li>表格3</li>
+</ul>
+<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用<code></code></h3><h3 id="使用printf"><a href="#使用printf" class="headerlink" title="使用printf()"></a>使用printf()</h3><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><h2 id="高级教程"><a href="#高级教程" class="headerlink" title="高级教程"></a>高级教程</h2><p><a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">参考文献</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Markdown </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[gogo2]]></title>
       <url>/2020/01/27/gogo2/</url>
       <content type="html"></content>
