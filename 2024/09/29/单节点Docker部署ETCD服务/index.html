@@ -20,21 +20,22 @@
   <title>单节点Docker部署ETCD服务 - ZJC's Blogs</title>
 
   
-    <meta name="description" content="构建etcd服务端容器1234$ docker run -d --name&#x3D;etcd-server \-e ALLOW_NONE_AUTHENTICATION&#x3D;yes \bitnami&#x2F;etcd:3.5 \etcd  构建etcd客户端容器，用于测试1234$ docker run -d --name&#x3D;etcd-client \-e ALLOW_NONE_AUTHENTICATION&#x3D;yes \b">
+    <meta name="description" content="构建etcd服务端容器1234docker run -d --name&#x3D;etcd-server \-e ALLOW_NONE_AUTHENTICATION&#x3D;yes \bitnami&#x2F;etcd:3.5 \etcd  构建etcd客户端容器，用于测试1234docker run -d --name&#x3D;etcd-client \-e ALLOW_NONE_AUTHENTICATION&#x3D;yes \bitna">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单节点Docker部署ETCD服务">
 <meta property="og:url" content="http://example.com/2024/09/29/%E5%8D%95%E8%8A%82%E7%82%B9Docker%E9%83%A8%E7%BD%B2ETCD%E6%9C%8D%E5%8A%A1/index.html">
 <meta property="og:site_name" content="ZJC&#39;s Blogs">
-<meta property="og:description" content="构建etcd服务端容器1234$ docker run -d --name&#x3D;etcd-server \-e ALLOW_NONE_AUTHENTICATION&#x3D;yes \bitnami&#x2F;etcd:3.5 \etcd  构建etcd客户端容器，用于测试1234$ docker run -d --name&#x3D;etcd-client \-e ALLOW_NONE_AUTHENTICATION&#x3D;yes \b">
+<meta property="og:description" content="构建etcd服务端容器1234docker run -d --name&#x3D;etcd-server \-e ALLOW_NONE_AUTHENTICATION&#x3D;yes \bitnami&#x2F;etcd:3.5 \etcd  构建etcd客户端容器，用于测试1234docker run -d --name&#x3D;etcd-client \-e ALLOW_NONE_AUTHENTICATION&#x3D;yes \bitna">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-29T05:31:50.000Z">
-<meta property="article:modified_time" content="2024-09-29T16:13:55.633Z">
+<meta property="article:modified_time" content="2024-09-30T02:59:00.859Z">
 <meta property="article:author" content="ZJC">
+<meta property="article:tag" content="中间件">
 <meta name="twitter:card" content="summary">
   
   
   
-  
+  <meta name="keywords" content="中间件">
 
   <!-- feed -->
   
@@ -75,8 +76,8 @@
 <div class="article banner top">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-29T05:31:50.000Z">2024-09-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-29T16:13:55.633Z">2024-09-30</time></span></div></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/">云计算</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/Docker/">Docker</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-29T05:31:50.000Z">2024-09-29</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-30T02:59:00.859Z">2024-09-30</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -87,9 +88,9 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="构建etcd服务端容器"><a href="#构建etcd服务端容器" class="headerlink" title="构建etcd服务端容器"></a>构建etcd服务端容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d --name=etcd-server \</span><br><span class="line">-e ALLOW_NONE_AUTHENTICATION=<span class="built_in">yes</span> \</span><br><span class="line">bitnami/etcd:3.5 \</span><br><span class="line">etcd</span><br></pre></td></tr></table></figure>
+  </div><article class="md-text content"><h2 id="构建etcd服务端容器"><a href="#构建etcd服务端容器" class="headerlink" title="构建etcd服务端容器"></a>构建etcd服务端容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=etcd-server \</span><br><span class="line">-e ALLOW_NONE_AUTHENTICATION=<span class="built_in">yes</span> \</span><br><span class="line">bitnami/etcd:3.5 \</span><br><span class="line">etcd</span><br></pre></td></tr></table></figure>
 
-<h2 id="构建etcd客户端容器，用于测试"><a href="#构建etcd客户端容器，用于测试" class="headerlink" title="构建etcd客户端容器，用于测试"></a>构建etcd客户端容器，用于测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d --name=etcd-client \</span><br><span class="line">-e ALLOW_NONE_AUTHENTICATION=<span class="built_in">yes</span> \</span><br><span class="line">bitnami/etcd:3.5 \</span><br><span class="line">etcd</span><br></pre></td></tr></table></figure>
+<h2 id="构建etcd客户端容器，用于测试"><a href="#构建etcd客户端容器，用于测试" class="headerlink" title="构建etcd客户端容器，用于测试"></a>构建etcd客户端容器，用于测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=etcd-client \</span><br><span class="line">-e ALLOW_NONE_AUTHENTICATION=<span class="built_in">yes</span> \</span><br><span class="line">bitnami/etcd:3.5 \</span><br><span class="line">etcd</span><br></pre></td></tr></table></figure>
 
 <h2 id="客户端容器内，操作etcd-server"><a href="#客户端容器内，操作etcd-server" class="headerlink" title="客户端容器内，操作etcd-server"></a>客户端容器内，操作etcd-server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">etcdctl --endpoints=http://172.17.0.2:2379 put /mykey <span class="string">&quot;value&quot;</span></span><br><span class="line"></span><br><span class="line">etcdctl --endpoints=http://172.17.0.6:2379 get /mykey</span><br><span class="line"><span class="comment"># 获取全部以mykey为前缀的value</span></span><br><span class="line">etcdctl --endpoints=http://172.17.0.6:2379 get /mykey --prefix</span><br></pre></td></tr></table></figure>
 
@@ -112,7 +113,7 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">ZJC</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期</a><a href="/">分类</a><a href="/">标签</a><a href="/">归档</a></div><div class="sitemap-group"><span class="fs15">项目</span><a href="/">开源库</a></div><div class="sitemap-group"><span class="fs15">社交</span><a href="/">友链</a><a href="/">留言板</a></div><div class="sitemap-group"><span class="fs15">更多</span><a href="/">关于本站</a><a href="/">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">ZJC</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
