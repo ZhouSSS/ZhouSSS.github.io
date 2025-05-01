@@ -25,7 +25,8 @@ jobs:
       - name: Sync content to Quartz
         run: |
           rm -rf site/content
-          cp -r content site/content
+          mkdir -p site/content
+          cp -r content/* site/content/
 
       - name: Install dependencies & build Quartz
         run: |
