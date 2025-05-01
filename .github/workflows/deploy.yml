@@ -3,20 +3,20 @@ name: Build & Deploy Quartz to GitHub Pages
 on:
   push:
     branches:
-      - content  # 当你推送 content 分支时触发
+      - content # 当 content 分支有更新时触发
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Quartz project (main branch)
+      - name: Checkout Quartz project (quartz branch)
         uses: actions/checkout@v3
         with:
-          ref: main
-          path: site  # Quartz 项目主目录放在 site 目录下
+          ref: quartz
+          path: site
 
-      - name: Checkout content branch
+      - name: Checkout content (content branch)
         uses: actions/checkout@v3
         with:
           ref: content
@@ -37,5 +37,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site/public  # Quartz 默认构建输出目录
-          publish_branch: gh-pages
+          publish_dir: site/public
+          publish_branch: main # ✅ 改为 main 分支
+          force_orphan: true # ✅ 保证 main 分支完全覆盖（清空再部署）
