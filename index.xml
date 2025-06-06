@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>ZJC Obsidian</title>
+      <link>https://</link>
+      <description>Last 10 notes on ZJC Obsidian</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>CentOS命令杂项</title>
+    <link>https://CentOS7.9-%E5%91%BD%E4%BB%A4%E6%9D%82%E9%A1%B9</link>
+    <guid>https://CentOS7.9-%E5%91%BD%E4%BB%A4%E6%9D%82%E9%A1%B9</guid>
+    <description> 1.1 VMware虚拟机配置 开机无ip问题： 1.确认网卡名 ip a 2.编辑网卡配置文件 sudo vi sudo vi /etc/sysconfig/network-scripts/ifcfg-ens33 修改配置如下：主要是ONBOOT=yes TYPE=Ethernet BOOTPROTO=dhcp NAME=ens33 DEVICE=ens33 ONBOOT=yes 3.重启后可自动分配ip 1.2 配置ssh+root远程连接 1.配置root用户密码 sudo passwd root 2.编辑ssh配置文件 vi /etc/ssh/sshd_config 3.修改Perm...</description>
+    <pubDate>Fri, 06 Jun 2025 15:36:27 GMT</pubDate>
+  </item><item>
+    <title>ROS2+PX4安装配置及开发环境搭建</title>
+    <link>https://ROS2+PX4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA</link>
+    <guid>https://ROS2+PX4%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA</guid>
+    <description> 一、简介 配置环境如下： Ubuntu22.04 ROS2 Humble PX4 Gazebo Ignition （gz sim8.9） QGroundControl MicroXRCEAgent 最终完成多无人机数据转发接入ROS2 WARNING 所有安装操作均为普通用户，非root用户下进行 系统问题、代理配置等请参考CentOS7.9 命令杂项 二、PX4源码下载编译 拉源码 git clone github.com/PX4/PX4-Autopilot.git --recursive 安装依赖 bash ./PX4-Autopilot/Tools/setup/ubuntu.sh 安装...</description>
+    <pubDate>Fri, 06 Jun 2025 15:36:27 GMT</pubDate>
+  </item><item>
+    <title>C++程序内存泄漏及性能检测</title>
+    <link>https://C++%E7%A8%8B%E5%BA%8F%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E5%8F%8A%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B</link>
+    <guid>https://C++%E7%A8%8B%E5%BA%8F%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E5%8F%8A%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B</guid>
+    <description>一、安装 #安装 valgrind sudo apt-get install valgrind # Debian/Ubuntu sudo yum install valgrind # CentOS/Fedora #安装 massif-visualizer sudo apt install massif-visualizer 二、检测内存泄漏 1.基本介绍 （1）Memcheck。这是valgrind应用最广泛的工具，一个重量级的内存检查器，能够发现开发中绝大多数内存错误使用情况，比如：使用未初始化的内存，使用已经释放了的内存，内存访问越界等。这也是本文将重点介绍的部分。 （2）Callgrin...</description>
+    <pubDate>Fri, 06 Jun 2025 15:23:47 GMT</pubDate>
+  </item><item>
+    <title>Ubuntu20.04安装MiniKube</title>
+    <link>https://Ubuntu20.04%E5%AE%89%E8%A3%85MiniKube</link>
+    <guid>https://Ubuntu20.04%E5%AE%89%E8%A3%85MiniKube</guid>
+    <description>安装Docker (阿里云镜像) 1.卸载Docker旧版本 sudo apt-get remove docker docker-engine docker-ce docker.io 2.添加阿里云GPG秘钥 curl -fsSL mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add - 3.设置存储库 sudo add-apt-repository &quot;deb [arch=amd64] mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) s...</description>
+    <pubDate>Fri, 06 Jun 2025 15:23:47 GMT</pubDate>
+  </item><item>
+    <title>我的主页</title>
+    <link>https:///</link>
+    <guid>https:///</guid>
+    <description>欢迎来到我的博客！ 中文页面 .</description>
+    <pubDate>Fri, 06 Jun 2025 15:23:47 GMT</pubDate>
+  </item><item>
+    <title>libclang代码生成</title>
+    <link>https://libclang%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90</link>
+    <guid>https://libclang%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90</guid>
+    <description>安装clang工具链 sudo apt-get install clang-10 lldb-10 lld-10 python安装相关包 pip install clang==10.0.1 clang++ 命令生成抽象语法树 #打印AST clang++ -Xclang -ast-dump -fsyntax-only 目标文件.h #将AST保存到二进制文件(目标文件.h.gch) clang++ -emit-ast 目标文件.h 例： //待解析源文件 class Box { public: double length; // 长度 double breadth; // 宽度 double h...</description>
+    <pubDate>Fri, 06 Jun 2025 15:23:47 GMT</pubDate>
+  </item><item>
+    <title>python打包</title>
+    <link>https://python%E6%89%93%E5%8C%85</link>
+    <guid>https://python%E6%89%93%E5%8C%85</guid>
+    <description>安装pyinstaller工具 pip install pyinstaller==6.2.0 #装别的版本,打包带--noconsole会报错 #(225, &#039;&#039;, &#039;无法成功完成操作，因为文件包含病毒或潜在的垃圾软件。&#039;) 打包单python文件加配置文件 pyinstaller --onefile --add-data &quot;config.ini;.&quot; DbxController.py --noconsole #--noconsole 打包后不会有终端窗口.</description>
+    <pubDate>Fri, 06 Jun 2025 15:23:47 GMT</pubDate>
+  </item><item>
+    <title>单节点Docker部署ETCD服务</title>
+    <link>https://%E5%8D%95%E8%8A%82%E7%82%B9Docker%E9%83%A8%E7%BD%B2ETCD%E6%9C%8D%E5%8A%A1</link>
+    <guid>https://%E5%8D%95%E8%8A%82%E7%82%B9Docker%E9%83%A8%E7%BD%B2ETCD%E6%9C%8D%E5%8A%A1</guid>
+    <description>构建etcd服务端容器 docker run -d --name=etcd-server \ -e ALLOW_NONE_AUTHENTICATION=yes \ bitnami/etcd:3.5 \ etcd 构建etcd客户端容器，用于测试 docker run -d --name=etcd-client \ -e ALLOW_NONE_AUTHENTICATION=yes \ bitnami/etcd:3.5 \ etcd 客户端容器内，操作etcd-server etcdctl --endpoints=http://172.17.0.2:2379 put /mykey &quot;va...</description>
+    <pubDate>Fri, 06 Jun 2025 15:23:47 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
