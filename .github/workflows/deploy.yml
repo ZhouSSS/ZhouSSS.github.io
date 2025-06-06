@@ -3,26 +3,30 @@ name: Build & Deploy Quartz to GitHub Pages
 on:
   push:
     branches:
-      - content # 当 content 分支有更新时触发
+      - main
+
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Quartz project (quartz branch)
+      - name: Checkout Quartz project (quartz branch in this repo)
         uses: actions/checkout@v3
         with:
           ref: quartz
           path: site
 
-      - name: Checkout content (content branch)
+      - name: Checkout content from external repo (zjc-content/main)
         uses: actions/checkout@v3
         with:
-          ref: content
+          repository: ZhouSSS/zjc-content         
+          ref: main
+          token: ${{ secrets.CONTENT_REPO_TOKEN }} 
           path: content
 
-      - name: Sync content to Quartz
+      - name: Sync content into Quartz site
         run: |
           rm -rf site/content
           mkdir -p site/content
@@ -39,5 +43,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: site/public
-          publish_branch: main # ✅ 改为 main 分支
-          force_orphan: true # ✅ 保证 main 分支完全覆盖（清空再部署）
+          publish_branch: main   
+          force_orphan: true   
