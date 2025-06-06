@@ -3,7 +3,7 @@ name: Build & Deploy Quartz to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - quartz
 
   workflow_dispatch:
 
