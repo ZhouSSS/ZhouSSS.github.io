@@ -6,7 +6,6 @@ on:
       - quartz
 
   workflow_dispatch:
-
   repository_dispatch:
     types: [build_and_deploy_quartz]  # 这里必须和你 curl 请求里的 event_type 保持一致
 
