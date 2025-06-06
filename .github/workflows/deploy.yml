@@ -11,10 +11,11 @@ on:
 
 jobs:
   deploy:
-    #if: >
-     # github.event_name == 'push' ||
-     # github.event_name == 'workflow_dispatch' ||
-     # (github.event_name == 'repository_dispatch' && github.event.action == 'build_and_deploy_quartz')
+    if: >
+      github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'repository_dispatch' 
+    # && github.event.action == 'build_and_deploy_quartz')
 
     runs-on: ubuntu-latest
 
