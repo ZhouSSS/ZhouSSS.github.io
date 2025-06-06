@@ -7,8 +7,16 @@ on:
 
   workflow_dispatch:
 
+  repository_dispatch:
+    types: [build_and_deploy_quartz]  # 这里必须和你 curl 请求里的 event_type 保持一致
+
 jobs:
   deploy:
+    if: >
+      github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'repository_dispatch' && github.event.action == 'build_and_deploy_quartz')
+
     runs-on: ubuntu-latest
 
     steps:
@@ -21,9 +29,9 @@ jobs:
       - name: Checkout content from external repo (zjc-content/main)
         uses: actions/checkout@v3
         with:
-          repository: ZhouSSS/zjc-content         
+          repository: ZhouSSS/zjc-content
           ref: main
-          token: ${{ secrets.CONTENT_REPO_TOKEN }} 
+          token: ${{ secrets.CONTENT_REPO_TOKEN }}
           path: content
 
       - name: Sync content into Quartz site
@@ -43,5 +51,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: site/public
-          publish_branch: main   
-          force_orphan: true   
+          publish_branch: main
+          force_orphan: true
