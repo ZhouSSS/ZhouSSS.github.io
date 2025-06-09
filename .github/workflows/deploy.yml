@@ -21,13 +21,13 @@ jobs:
 
     steps:
       - name: Checkout Quartz project (quartz branch in this repo)
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: quartz
           path: site
 
       - name: Checkout content from external repo (zjc-content/main)
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ZhouSSS/zjc-content
           ref: main
@@ -47,7 +47,7 @@ jobs:
           npx quartz build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: site/public
